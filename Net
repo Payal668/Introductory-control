@@ -1,0 +1,5 @@
+import pandas as pd
+bowler= [ { "maidens": "0", "runs": "15", "overs": "4", "name": "D Willey*", "wickets": "2" }, { "maidens": "0", "runs": "32", "overs": "3", "name": "Jhye Richardson", "wickets": "2" } ]
+ddf = pd.DataFrame(bowler)
+ddf['economy'] = 100* ddf.runs.astype(int) / (ddf.overs.astype(int) * 6)
+print(ddf)
